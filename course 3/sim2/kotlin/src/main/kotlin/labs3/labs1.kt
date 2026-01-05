@@ -4,9 +4,16 @@
 
 package labs3
 
-open class Study {}
-class School : Study() {}
-class Student : Study() {}
+open class Study {
+    open var names = "Study";
+    open fun getType(): String = "Study"
+}
+class School : Study() {
+    override fun getType(): String = "School"
+}
+class Student : Study() {
+    override fun getType(): String = "Student"
+}
 
 class Conference(private val types: List<Study>) {
 
